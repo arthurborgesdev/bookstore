@@ -1,29 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+import Header from './components/Header';
+import Book from './components/Book';
+import BookNew from './components/BookNew';
+
+const booksInfo = [
+  {
+    id: 1,
+    category: 'Action',
+    name: 'The Hunger Games',
+    author: 'Suzanne Collins',
+  },
+  {
+    id: 2,
+    category: 'Science Fiction',
+    name: 'Dune',
+    author: 'Frank Herbert',
+  },
+  {
+    id: 3,
+    category: 'Economy',
+    name: 'Capital in the Twenty-First Century',
+    author: 'Suzanne Collins',
+  },
+];
+
+const App = () => {
+  const bookList = booksInfo.map((bookInfo) => <Book key={bookInfo.id} info={bookInfo} />);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      { bookList }
+      <BookNew />
+    </>
   );
-}
+};
 
 export default App;

@@ -1,23 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import BookInfo from './BookInfo';
 import BookActions from './BookActions';
 import BookCompletionStatus from './BookCompletionStatus';
 import BookProgress from './BookProgress';
 
-const Book = () => {
-  return (
-    <>
-      <div class="book-first-column">
-        <BookInfo />
-        <BookActions />
-      </div>
-      <div class="book-remaining-column">
-        <BookCompletionStatus />
-        <BookProgress /> 
-      </div>
-    </>
-  )
-}
+const Book = ({ info }) => (
+  <>
+    <div className="book-first-column">
+      <BookInfo info={info} />
+      <BookActions />
+    </div>
+    <div className="book-remaining-column">
+      <BookCompletionStatus />
+      <BookProgress />
+    </div>
+  </>
+);
+
+Book.propTypes = {
+  info: PropTypes.string.isRequired,
+};
 
 export default Book;
