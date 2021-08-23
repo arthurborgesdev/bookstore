@@ -13,8 +13,8 @@ const Book = ({ info }) => (
       <BookActions />
     </div>
     <div className="book-remaining-column">
-      <BookCompletionStatus />
-      <BookProgress />
+      <BookCompletionStatus percentage={info.percentage} />
+      <BookProgress chapter={info.chapter} />
     </div>
   </>
 );
