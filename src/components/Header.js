@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Link,
+} from 'react-router-dom';
 
 const Header = () => (
   <>
@@ -6,8 +9,12 @@ const Header = () => (
       <h1 className="title-h1">Bookstore CMS</h1>
       <nav className="nav-links">
         <ul>
-          <li>BOOKS</li>
-          <li>CATEGORIES</li>
+          <li>
+            <Link to="/">BOOKS</Link>
+          </li>
+          <li>
+            <Link to="/categories">CATEGORIES</Link>
+          </li>
         </ul>
       </nav>
     </div>

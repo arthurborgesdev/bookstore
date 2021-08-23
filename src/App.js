@@ -1,8 +1,13 @@
 import './App.css';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 import Header from './components/Header';
 import Book from './components/Book';
 import BookNew from './components/BookNew';
+import Categories from './components/Categories';
 
 const booksInfo = [
   {
@@ -34,11 +39,18 @@ const booksInfo = [
 const App = () => {
   const bookList = booksInfo.map((bookInfo) => <Book key={bookInfo.id} info={bookInfo} />);
   return (
-    <>
+    <Router>
       <Header />
-      { bookList }
-      <BookNew />
-    </>
+      <Switch>
+        <Route exact path="/">
+          { bookList }
+          <BookNew />
+        </Route>
+        <Route path="/categories">
+          <Categories />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 
