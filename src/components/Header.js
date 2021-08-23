@@ -2,12 +2,12 @@ import React from 'react';
 
 const Header = () => (
   <>
-    <div className="title-nav">
-      <h1>Bookstore CMS</h1>
-      <nav>
+    <div className="title-navbar">
+      <h1 className="title-h1">Bookstore CMS</h1>
+      <nav className="nav-links">
         <ul>
           <li>BOOKS</li>
-          <li>CATEORIES</li>
+          <li>CATEGORIES</li>
         </ul>
       </nav>
     </div>

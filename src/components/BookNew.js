@@ -4,13 +4,14 @@ const BookNew = () => (
   <>
     <h2>ADD NEW BOOK</h2>
     <div className="add-book-form">
-      <input placeholder="Book title" />
-      <select name="categories" id="categories">
+      <input className="book-input" placeholder="Book title" />
+      <select className="category-select" name="categories" id="categories">
+        <option value="" selected>Category</option>
         <option value="action">Action</option>
         <option value="science-fiction">Science Fiction</option>
         <option value="economy">Economy</option>
       </select>
-      <input type="submit" value="ADD BOOK" />
+      <input className="add-book-button" type="submit" value="ADD BOOK" />
     </div>
   </>
 );

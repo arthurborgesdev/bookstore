@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const BookProgress = ({ chapter }) => (
-  <div>
+  <div className="book-progress">
     <p>CURRENT CHAPTER</p>
     <p className="book-progress-chapter">{chapter}</p>
     <button type="button">UPDATE PROGRESS</button>

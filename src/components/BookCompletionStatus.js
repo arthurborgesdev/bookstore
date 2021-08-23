@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const BookCompletionStatus = ({ percentage }) => (
-  <div>
+  <div className="book-completion-status">
     <i />
     <p className="completion-percentage">{percentage}</p>
     <p>Completed</p>

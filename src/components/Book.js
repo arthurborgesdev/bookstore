@@ -7,16 +7,16 @@ import BookCompletionStatus from './BookCompletionStatus';
 import BookProgress from './BookProgress';
 
 const Book = ({ info }) => (
-  <>
+  <div className="book-row">
     <div className="book-first-column">
-      <BookInfo info={info} />
+      <BookInfo category={info.category} name={info.name} author={info.author} />
       <BookActions />
     </div>
     <div className="book-remaining-column">
       <BookCompletionStatus percentage={info.percentage} />
       <BookProgress chapter={info.chapter} />
     </div>
-  </>
+  </div>
 );
 
 Book.propTypes = {
