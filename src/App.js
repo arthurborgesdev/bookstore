@@ -3,6 +3,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Header from './components/Header';
 import Book from './components/Book';
 import BookNew from './components/BookNew';
