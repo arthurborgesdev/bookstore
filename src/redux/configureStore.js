@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleWare } from "react-redux";
+import { createStore, combineReducers, applyMiddleWare } from "redux";
 import logger from 'redux-logger';
 import booksReducer from './books/books';
 

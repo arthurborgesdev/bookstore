@@ -9,22 +9,24 @@ const initialState = [];
 
 // Action Creators
 
-export const addBook = payload => ({
+export const addBook = (payload) => ({
   type: ADD_BOOK,
-  payload
-})
+  payload,
+});
 
-export const removeBook = payload => ({
+export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
-  payload
-})
+  payload,
+});
 
 // Reducer
 
 const reducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case ADD_BOOK:
+      return [...state, action.payload];
     case REMOVE_BOOK:
+      return state.filter((book) => book.id !== action.payload.id);
     default:
       return state;
   }

@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Book from './components/Book';
 import BookNew from './components/BookNew';
 import Categories from './components/Categories';
+import store from './redux/configureStore';
 
 const booksInfo = [
   {
@@ -38,18 +39,20 @@ const booksInfo = [
 const App = () => {
   const bookList = booksInfo.map((bookInfo) => <Book key={bookInfo.id} info={bookInfo} />);
   return (
-    <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          { bookList }
-          <BookNew />
-        </Route>
-        <Route path="/categories">
-          <Categories />
-        </Route>
-      </Switch>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            { bookList }
+            <BookNew />
+          </Route>
+          <Route path="/categories">
+            <Categories />
+          </Route>
+        </Switch>
+      </Router>
+    </Provider>
   );
 };
 
