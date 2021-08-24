@@ -6,28 +6,28 @@ import BookActions from './BookActions';
 import BookCompletionStatus from './BookCompletionStatus';
 import BookProgress from './BookProgress';
 
-const Book = ({ info }) => (
+const Book = (
+  {
+    id, title, author, category,
+  },
+) => (
   <div className="book-row">
     <div className="book-first-column">
-      <BookInfo category={info.category} name={info.name} author={info.author} />
-      <BookActions />
+      <BookInfo title={title} author={author} category={category} />
+      <BookActions id={id} />
     </div>
     <div className="book-remaining-column">
-      <BookCompletionStatus percentage={info.percentage} />
-      <BookProgress chapter={info.chapter} />
+      <BookCompletionStatus />
+      <BookProgress />
     </div>
   </div>
 );
 
-Book.propTypes = {
-  info: PropTypes.shape({
-    id: PropTypes.number,
-    category: PropTypes.string,
-    name: PropTypes.string,
-    author: PropTypes.string,
-    percentage: PropTypes.string,
-    chapter: PropTypes.string,
-  }).isRequired,
-};
+Book.propTypes = ({
+  id: PropTypes.number,
+  category: PropTypes.string,
+  title: PropTypes.string,
+  author: PropTypes.string,
+}).isRequired;
 
 export default Book;

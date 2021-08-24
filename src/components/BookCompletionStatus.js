@@ -1,16 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const BookCompletionStatus = ({ percentage }) => (
+const BookCompletionStatus = () => (
   <div className="book-completion-status">
     <i />
-    <p className="completion-percentage">{percentage}</p>
+    <p className="completion-percentage">0%</p>
     <p>Completed</p>
   </div>
 );
-
-BookCompletionStatus.propTypes = {
-  percentage: PropTypes.string.isRequired,
-};
 
 export default BookCompletionStatus;

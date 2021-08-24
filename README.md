@@ -6,6 +6,8 @@
 
 The objective of this exercise was to initialize a create-react-app with re-usable components and later to set a structure folder following the 'ducks pattern' and then add React Router.
 
+The second part of the exercise involved add and removal of Books using Redux Store.
+
 ![screenshot](./screenshot.png)
 
 
@@ -13,6 +15,8 @@ The objective of this exercise was to initialize a create-react-app with re-usab
 
 - JavaScript/React
 - React Router
+- React-redux
+- Redux-logger
 - JSX
 - CSS
 - VSCode
