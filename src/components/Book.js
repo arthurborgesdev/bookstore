@@ -6,11 +6,15 @@ import BookActions from './BookActions';
 import BookCompletionStatus from './BookCompletionStatus';
 import BookProgress from './BookProgress';
 
-const Book = ({ title, author, category }) => (
+const Book = (
+  {
+    id, title, author, category,
+  },
+) => (
   <div className="book-row">
     <div className="book-first-column">
       <BookInfo title={title} author={author} category={category} />
-      <BookActions />
+      <BookActions id={id} />
     </div>
     <div className="book-remaining-column">
       <BookCompletionStatus />
@@ -20,6 +24,7 @@ const Book = ({ title, author, category }) => (
 );
 
 Book.propTypes = ({
+  id: PropTypes.number,
   category: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
