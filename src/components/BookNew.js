@@ -34,6 +34,9 @@ const BookNew = () => {
     };
 
     dispatch(addBook(newBook));
+    setBookCategory('');
+    setBookTitle('');
+    setBookAuthor('');
   };
 
   return (
@@ -45,7 +48,7 @@ const BookNew = () => {
           className="title-input"
           placeholder="Book title"
           value={bookTitle}
-          onChange={() => handleBookTitleChange}
+          onChange={handleBookTitleChange}
         />
         <input
           name="author"
