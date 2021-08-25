@@ -1,3 +1,5 @@
+const bookStoreID = 'AuUAkr1MpC49B8QoMijD';
+
 // Actions
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
