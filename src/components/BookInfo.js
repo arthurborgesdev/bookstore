@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const BookInfo = ({ title, author, category }) => (
+const BookInfo = ({ title, category }) => (
   <div>
     <p className="book-category">{category}</p>
     <p className="book-title">{title}</p>

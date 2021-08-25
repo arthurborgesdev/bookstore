@@ -21,18 +21,6 @@ const createBook = async (obj) => {
   return results.status;
 }
 
-const getBooks = async () => {
-  try {
-    const result = await fetch(booksURL);
-
-    const books = await result.json();
-
-    return books;
-  } catch (error) {
-    return [];
-  }
-}
-
 const deleteBook = async (id) => {
   const results = await fetch(`${booksURL}${id}`, {
     method: 'DELETE',
@@ -44,4 +32,4 @@ const deleteBook = async (id) => {
   return results.status;
 }
 
-export { createBook, getBooks, deleteBook }
+export { createBook, deleteBook }
