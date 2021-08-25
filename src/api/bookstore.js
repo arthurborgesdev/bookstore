@@ -3,7 +3,7 @@ const bookStoreID = 'AuUAkr1MpC49B8QoMijD';
 
 const booksURL = `${baseURL}${bookStoreID}/books/`;
 
-const addBook = async (obj) => {
+const createBook = async (obj) => {
   const bookBody = {
     item_id: obj.item_id,
     title: obj.title,
@@ -33,7 +33,7 @@ const getBooks = async () => {
   }
 }
 
-const removeBook = async (id) => {
+const deleteBook = async (id) => {
   const results = await fetch(`${booksURL}${id}`, {
     method: 'DELETE',
     headers: {
@@ -44,4 +44,4 @@ const removeBook = async (id) => {
   return results.status;
 }
 
-export { addBook, getBooks, removeBook }
+export { createBook, getBooks, deleteBook }

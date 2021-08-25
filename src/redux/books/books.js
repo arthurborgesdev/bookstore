@@ -1,10 +1,10 @@
-import { addBook, getBooks, removeBook } from '../../api/bookstore';
+import { createBook, deleteBook } from '../../api/bookstore';
+import { GET_BOOKS, GET_BOOKS_SUCCESS, GET_BOOKS_ERR } from '../slices/booksSlice';
 
 // Actions
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
-const GET_BOOKS = 'bookStore/books/GET_BOOKS';
 
 // Initial state
 
@@ -31,10 +31,17 @@ export const removeBook = (payload) => ({
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      addBook(action.payload);
+      createBook(action.payload);
       return [...state, action.payload];
     case REMOVE_BOOK:
+      deleteBook();
       return state.filter((book) => book.id !== action.payload.id);
+    case GET_BOOKS:
+      return {...state, pending: true }
+    case GET_BOOKS_SUCCESS:
+      return {...state, pending: false, books: action.books };
+    case GET_BOOKS_ERR:
+      return {...state, pending: false, error: action.error };
     default:
       return state;
   }
