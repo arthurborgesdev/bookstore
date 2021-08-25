@@ -7,7 +7,6 @@ import { addBook } from '../redux/books/books';
 const BookNew = () => {
   const [bookCategory, setBookCategory] = useState('');
   const [bookTitle, setBookTitle] = useState('');
-  const [bookAuthor, setBookAuthor] = useState('');
 
   const handleBookCategoryChange = (e) => {
     setBookCategory(e.target.value);
@@ -15,10 +14,6 @@ const BookNew = () => {
 
   const handleBookTitleChange = (e) => {
     setBookTitle(e.target.value);
-  };
-
-  const handleBookAuthorChange = (e) => {
-    setBookAuthor(e.target.value);
   };
 
   const dispatch = useDispatch();
@@ -30,13 +25,11 @@ const BookNew = () => {
       id: uuidv4(),
       category: bookCategory,
       title: bookTitle,
-      author: bookAuthor,
     };
 
     dispatch(addBook(newBook));
     setBookCategory('');
     setBookTitle('');
-    setBookAuthor('');
   };
 
   return (
@@ -49,13 +42,6 @@ const BookNew = () => {
           placeholder="Book title"
           value={bookTitle}
           onChange={handleBookTitleChange}
-        />
-        <input
-          name="author"
-          className="author-input"
-          placeholder="Book author"
-          value={bookAuthor}
-          onChange={handleBookAuthorChange}
         />
         <select
           className="category-select"
