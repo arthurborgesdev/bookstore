@@ -8,7 +8,8 @@ const BookStore = () => {
   useEffect(() => {
     dispatch(getBooks());
   }, []);
-  const bookStore = useSelector((store) => store.booksReducer.books);
+  let bookStore = useSelector((state) => state.booksReducer.books);
+  if (bookStore.error) { bookStore = []; }
   const bookComponent = bookStore.map(
     (book) => (
       <Book

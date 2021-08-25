@@ -32,16 +32,16 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       createBook(action.payload);
-      return [...state, action.payload];
+      return state;
     case REMOVE_BOOK:
-      deleteBook();
-      return state.filter((book) => book.id !== action.payload.id);
+      deleteBook(action.payload.id);
+      return state;
     case GET_BOOKS:
-      return {...state, pending: true }
+      return { ...state, pending: true };
     case GET_BOOKS_SUCCESS:
-      return {...state, pending: false, books: action.books };
+      return { ...state, pending: false, books: action.books };
     case GET_BOOKS_ERR:
-      return {...state, pending: false, error: action.error };
+      return { ...state, pending: false, error: action.error };
     default:
       return state;
   }
