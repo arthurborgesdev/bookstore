@@ -43,3 +43,5 @@ const removeBook = async (id) => {
 
   return results.status;
 }
+
+export { addBook, getBooks, removeBook }
