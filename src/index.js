@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import getBooks from './redux/slices/booksSlice';
 
+getBooks();
 ReactDOM.render(
   <React.StrictMode>
     <App />

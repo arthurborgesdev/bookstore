@@ -34,7 +34,7 @@ const reducer = (state = initialState, action) => {
       createBook(action.payload);
       return state;
     case REMOVE_BOOK:
-      deleteBook(action.payload.id);
+      deleteBook(action.payload);
       return state;
     case GET_BOOKS:
       return { ...state, pending: true };

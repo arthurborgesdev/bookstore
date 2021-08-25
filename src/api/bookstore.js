@@ -23,6 +23,7 @@ const createBook = async (obj) => {
 };
 
 const deleteBook = async (id) => {
+  console.log(id);
   const results = await fetch(`${booksURL}${id}`, {
     method: 'DELETE',
     headers: {
