@@ -13,18 +13,16 @@ import store from './redux/configureStore';
 const App = () => (
   <Provider store={store}>
     <Router>
-      <div className="app">
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <BookStore />
-            <BookNew />
-          </Route>
-          <Route path="/categories">
-            <Categories />
-          </Route>
-        </Switch>
-      </div>
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <BookStore />
+          <BookNew />
+        </Route>
+        <Route path="/categories">
+          <Categories />
+        </Route>
+      </Switch>
     </Router>
   </Provider>
 );

@@ -36,7 +36,7 @@ const BookNew = () => {
   };
 
   return (
-    <>
+    <div className="new-book-container">
       <h2>ADD NEW BOOK</h2>
       <form onSubmit={submitBookToStore} className="add-book-form">
         <input
@@ -60,7 +60,7 @@ const BookNew = () => {
         </select>
         <input className="add-book-button" type="submit" value="ADD BOOK" />
       </form>
-    </>
+    </div>
   );
 };
 
