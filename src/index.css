@@ -1,20 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.app {
+  background-color: #fafafa;
+}
+
+.header-bar {
+  background-color: #fff;
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+}
+
 .title-navbar {
   display: flex;
 }
 
 .title-h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
   font-size: 1.875rem;
   color: #0290ff;
 }
 
-.nav-links ul {
+.nav-links {
   display: flex;
-  list-style-type: none;
 }
 
-.nav-links ul li {
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  align-self: center;
+}
+
+.nav-list li {
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
   padding: 0 15px;
+}
+
+.nav-list li a {
+  text-decoration: none;
   color: #121212;
+}
+
+.nav-list li a:active {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.nav-list li a:link {
+  text-decoration: none;
+  opacity: 0.5;
 }
 
 /* ----- Books ------ */

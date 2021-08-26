@@ -3,7 +3,7 @@ import React from 'react';
 const BookCompletionStatus = () => (
   <div className="book-completion-status">
     <i />
-    <p className="completion-percentage">0%</p>
+    <p className="completion-percentage">50%</p>
     <p>Completed</p>
   </div>
 );

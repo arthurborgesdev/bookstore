@@ -4,11 +4,11 @@ import {
 } from 'react-router-dom';
 
 const Header = () => (
-  <>
+  <div className="header-bar">
     <div className="title-navbar">
       <h1 className="title-h1">Bookstore CMS</h1>
       <nav className="nav-links">
-        <ul>
+        <ul className="nav-list">
           <li>
             <Link to="/">BOOKS</Link>
           </li>
@@ -18,8 +18,8 @@ const Header = () => (
         </ul>
       </nav>
     </div>
-    <span><i /></span>
-  </>
+    <span><i className="fas fa-user-alt" /></span>
+  </div>
 );
 
 export default Header;
