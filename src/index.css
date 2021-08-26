@@ -4,8 +4,15 @@
 body {
   background-color: #fafafa;
   min-height: 100vh;
-  border: 3px;
   box-sizing: border-box;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 75rem; 
 }
 
 /* ------- Header -------*/
@@ -13,6 +20,9 @@ body {
 .header-bar {
   background-color: #fff;
   width: 100%;
+}
+
+.header-bar > div {
   display: flex;
   justify-content: space-between;
 }
@@ -72,10 +82,6 @@ body {
 /* ----- Books ------ */
 
 /* ----- Book Info ---- */
-
-.bookstore {
-  padding: 50px;
-}
 
 .book-row {
   display: flex;
@@ -224,7 +230,7 @@ body {
 .new-book-container {
   border-top: 1px solid #e8e8e8;
   padding-top: 20px;
-  margin: 0 50px 15rem 50px;
+  margin-bottom: 15rem;
 }
 
 .new-book-container h2 {
@@ -235,48 +241,50 @@ body {
 }
 
 .title-input {
-  width: 65%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  width: calc(55% - 30px);
   height: 1.813rem;
-  color: #fff;
+  color: #888888;
   border: 1px solid #e8e8e8;
   border-radius: 4px;
-  margin-right: 30px;
   padding: 5px 0 5px 10px;
+  margin-right: 30px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #c4c4c4;
+  color: #888888;
   letter-spacing: -0.15px;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #c4c4c4;
+  color: #888888;
   letter-spacing: -0.15px;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-  color: #c4c4c4;
+  color: #888888;
   letter-spacing: -0.15px;
 }
 
 .category-select {
-  width: 15%;
-  margin-right: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  width: calc(25% - 30px);
   height: 2.813rem;
   background-color: #fff;
   border: 1px solid #e8e8e8;
-  color: #c4c4c4;
+  color: #888888;
   border-radius: 4px;
   margin-right: 30px;
 }
 
 .add-book-button {
-  width: 10%;
+  width: calc(20% - 15px);
   height: 2.813rem;
   background-color: #0290ff;
   border: 1px solid #0290ff;;
   color: #fff;
   border-radius: 3px;
-  margin-right: 30px;
 }
