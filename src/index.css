@@ -70,6 +70,8 @@
 
 /* ----- Books ------ */
 
+/* ----- Book Info ---- */
+
 .bookstore {
   padding: 50px;
 }
@@ -94,7 +96,8 @@
   font-family: 'Montserrat-Bold', sans-serif;
   font-size: 1.1rem;
   margin: 5px 0;
-  color: #8d8d8d;
+  opacity: 0.5;
+  color: #121212;
 }
 
 .book-title {
@@ -112,7 +115,68 @@
   font-size: 0.875rem;
 }
 
+/* ----- Book Completion Status ---- */
+
 .book-completion-status {
+  display: flex;
+}
+
+.arc-wrapper {
+  position: relative;
+  width: 84px;
+  height: 68px;
+  margin: 5px;
+}
+
+.arc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  border: 5px solid;
+}
+
+.arc-end {
+  border-color: #0290ff #0290ff #0290ff transparent;
+  transform: rotate(45deg);
+  z-index: 100;
+}
+
+.arc-start {
+  border-color: transparent #e8e8e8 #e8e8e8 #e8e8e8;
+  transform: rotate(45deg);
+  z-index: 50;
+}
+
+.completion-container {
+  display: flex;
+}
+
+.completion-status {
+  margin: auto 0;
+}
+
+.book-completion-percentage {
+  margin: auto 0;
+  align-self: center;
+  font-family: 'Montserrat-Regular', sans-serif;
+  color: #121212;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.completed-text {
+  opacity: 0.5;
+  color: #121212;
+  margin: 0;
+}
+
+/* ---------- Book Completion Status ------ */
+
+.book-completion-status {
+  align-self: center;
   width: 250px;
 }
 
