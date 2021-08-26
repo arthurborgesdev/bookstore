@@ -6,6 +6,11 @@ import getBooks from '../redux/slices/booksSlice';
 const BookStore = () => {
   const bookComponent = [];
 
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
+
   let bookStoreFetch = useSelector((store) => store.booksReducer.books);
   if (bookStoreFetch.error) {
     bookStoreFetch = [];
@@ -24,11 +29,6 @@ const BookStore = () => {
       ));
     });
   }
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getBooks());
-  }, []);
 
   return (
     <>

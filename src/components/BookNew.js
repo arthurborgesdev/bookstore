@@ -19,7 +19,7 @@ const BookNew = () => {
 
   const dispatch = useDispatch();
 
-  const submitBookToStore = (e) => {
+  const submitBookToStore = async (e) => {
     e.preventDefault();
 
     const newBook = {
@@ -28,10 +28,11 @@ const BookNew = () => {
       title: bookTitle,
     };
 
-    dispatch(addBook(newBook));
+    await dispatch(addBook(newBook));
     setBookCategory('');
     setBookTitle('');
-    dispatch(getBooks());
+    await dispatch(getBooks());
+    document.location.reload(true);
   };
 
   return (

@@ -34,8 +34,13 @@ const reducer = (state = initialState, action) => {
       createBook(action.payload);
       return state;
     case REMOVE_BOOK:
+    {
+      const entries = Object.fromEntries(
+        Object.entries(state.books).filter(([id]) => id !== action.payload),
+      );
       deleteBook(action.payload);
-      return state;
+      return { ...state, pending: false, books: entries };
+    }
     case GET_BOOKS:
       return { ...state, pending: true };
     case GET_BOOKS_SUCCESS:

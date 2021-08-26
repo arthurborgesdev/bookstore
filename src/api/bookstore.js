@@ -4,7 +4,6 @@ const bookStoreID = 'AuUAkr1MpC49B8QoMijD';
 const booksURL = `${baseURL}${bookStoreID}/books/`;
 
 const createBook = async (obj) => {
-  console.log(obj);
   const bookBody = {
     item_id: obj.id,
     title: obj.title,
@@ -23,7 +22,6 @@ const createBook = async (obj) => {
 };
 
 const deleteBook = async (id) => {
-  console.log(id);
   const results = await fetch(`${booksURL}${id}`, {
     method: 'DELETE',
     headers: {
