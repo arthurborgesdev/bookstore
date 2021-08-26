@@ -31,9 +31,9 @@ const BookStore = () => {
   }
 
   return (
-    <>
+    <div className="bookstore">
       { bookComponent }
-    </>
+    </div>
   );
 };
 
