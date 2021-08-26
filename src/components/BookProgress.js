@@ -2,9 +2,9 @@ import React from 'react';
 
 const BookProgress = () => (
   <div className="book-progress">
-    <p>CURRENT CHAPTER</p>
+    <p className="chapter-title">CURRENT CHAPTER</p>
     <p className="book-progress-chapter">Chapter 5</p>
-    <button type="button">UPDATE PROGRESS</button>
+    <button className="update-progress" type="button">UPDATE PROGRESS</button>
   </div>
 );
 
