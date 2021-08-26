@@ -9,7 +9,6 @@ const BookActions = ({ id }) => {
 
   const handleBookRemoval = async () => {
     dispatch(removeBook(id));
-    // await dispatch(getBooks());
   };
 
   return (

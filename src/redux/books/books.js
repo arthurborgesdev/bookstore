@@ -31,8 +31,16 @@ export const removeBook = (payload) => ({
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
+    {
+      console.log(state.books);
+      const newState = { ...state };
+      newState.books[action.payload.id] = [{
+        category: action.payload.category,
+        title: action.payload.title,
+      }];
       createBook(action.payload);
-      return state;
+      return { newState };
+    }
     case REMOVE_BOOK:
     {
       const entries = Object.fromEntries(

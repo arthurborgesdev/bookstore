@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import getBooks from '../redux/slices/booksSlice';
 
 import { addBook } from '../redux/books/books';
 
@@ -31,8 +30,6 @@ const BookNew = () => {
     await dispatch(addBook(newBook));
     setBookCategory('');
     setBookTitle('');
-    await dispatch(getBooks());
-    document.location.reload(true);
   };
 
   return (
