@@ -3,6 +3,9 @@ import {
   Link,
 } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserAlt } from '@fortawesome/free-solid-svg-icons';
+
 const Header = () => (
   <div className="header-bar">
     <div className="title-navbar">
@@ -18,7 +21,11 @@ const Header = () => (
         </ul>
       </nav>
     </div>
-    <span><i className="fas fa-user-alt" /></span>
+    <div className="avatar">
+      <span className="avatar-circle">
+        <FontAwesomeIcon icon={faUserAlt} size="lg" color="#0290ff" />
+      </span>
+    </div>
   </div>
 );
 

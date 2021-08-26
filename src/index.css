@@ -7,8 +7,9 @@
 .header-bar {
   background-color: #fff;
   width: 100%;
-  padding: 0 50px;
   display: flex;
+  padding-left: 50px;
+  justify-content: space-between;
 }
 
 .title-navbar {
@@ -44,14 +45,24 @@
   color: #121212;
 }
 
-.nav-list li a:active {
-  text-decoration: none;
-  opacity: 1;
-}
-
 .nav-list li a:link {
   text-decoration: none;
   opacity: 0.5;
+}
+
+.nav-list li a:hover {
+  opacity: 1;
+}
+
+.avatar {
+  padding-right: 100px;
+  margin: auto 0;
+}
+
+.avatar-circle {
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 /* ----- Books ------ */
