@@ -17,7 +17,9 @@ const Book = (
       <BookActions id={id} />
     </div>
     <div className="book-remaining-column">
-      <BookCompletionStatus />
+      <div className="completion-container">
+        <BookCompletionStatus />
+      </div>
       <BookProgress />
     </div>
   </div>
